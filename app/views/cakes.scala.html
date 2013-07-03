@@ -1,0 +1,37 @@
+@(cakes: Seq[model.Cake])
+
+@main("Bears Sugar Rush", "Cakes") {
+    <div class="row-fluid">
+        <div class="span3 sidenav visible-desktop" data-spy="affix-top"> <!-- Start left side-->
+            <ul class="bs-docs-sidenav affix nav nav-list">
+                @for(cake <- cakes) {
+                <li><a href='#@cake.name.replaceAll(" ", "")'><img src="@routes.Assets.at(cake.imageUrl)" class="smallImage img-circle"> @cake.name</a></li>
+                }
+            </ul>
+        </div> <!-- End left side-->
+
+        <div class="span9"> <!-- Start right side-->
+            @for(cake <- cakes) {
+                <a class="adjustedFromTop" id='@cake.name.replaceAll(" ", "")'></a>
+                <div class="row-fluid"> <!-- title and image -->
+                    <div class="span5">
+                        <img src="@routes.Assets.at(cake.imageUrl)" class="img-polaroid">
+                    </div>
+                    <div class="span4">
+                        <h1>@cake.name</h1>
+                    </div>
+                    <div class="span4">
+                        <h3>@cake.priceInfo</h3>
+                    </div>
+                </div> <!-- title and image -->
+
+                <div class="row-fluid">
+                    <div class="span9 cakeDescription">  <!-- description -->
+                        @cake.description
+                    </div>
+                </div> <!-- description -->
+                <hr />
+            }
+        </div> <!-- End right side-->
+    </div>
+}
