@@ -1,14 +1,11 @@
 package controllers
 
-import play.api._
 import play.api.mvc._
 import model.Cake
 
 object Application extends Controller {
   
-  def index = Action {
-    Ok(views.html.index())
-  }
+  def index = cakes()
 
   def calendar = Action {
     Ok(views.html.calendar())

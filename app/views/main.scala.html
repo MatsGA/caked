@@ -1,4 +1,4 @@
-@(title: String, active: String)(content: Html)
+@(active: String)(content: Html)
 
 @links() = @{
     val categories = scala.collection.immutable.List("Cakes", "Treats", "Contact", "Calendar", "About")
@@ -8,10 +8,14 @@
     }
 }
 
+@title() = @{
+    "CAKED!"
+}
+
 <!DOCTYPE html>
 <html>
     <head>
-        <title>@title - @active</title>
+        <title>@title</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootstrap.css")">
         <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootstrap-responsive.css")">
@@ -31,7 +35,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </a>
-                <a class="brand" href="/">Bears Sugar Rush</a>
+                <a class="brand" href="/">@title</a>
                 <div class="nav-collapse collapse">
                     <ul class="nav">
                         @links
