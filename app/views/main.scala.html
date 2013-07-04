@@ -1,16 +1,14 @@
 @(active: String)(content: Html)
 
 @links() = @{
-    val categories = scala.collection.immutable.List("Cakes", "Treats", "Contact", "Calendar", "About")
+    val categories = scala.collection.immutable.List(play.i18n.Messages.get("menu.cakes"), play.i18n.Messages.get("menu.treats"), play.i18n.Messages.get("menu.contact"), play.i18n.Messages.get("menu.calendar"), play.i18n.Messages.get("menu.about"))
     categories.map { category =>
         val activeCat = if (active == category) "active" else ""
         <li class={activeCat} ><a href={category.toLowerCase}>{category}</a></li>
     }
 }
 
-@title() = @{
-    "CAKED!"
-}
+@title() = @{"CAKED!"}
 
 <!DOCTYPE html>
 <html>
@@ -30,13 +28,23 @@
     <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container">
-                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </a>
                 <a class="brand" href="/">@title</a>
-                <div class="nav-collapse collapse">
+                <ul class="nav pull-right">
+                    <li><a href="mailto:cakes@@caked.no" class="">cakes@@caked.no</a></li>
+                    <li>
+                        <a class="btn btn-navbar hidden-tablet" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="nav-collapse hidden-tablet">
+                    <ul class="nav">
+                        @links
+                    </ul>
+                </div>
+                <div class="visible-tablet">
                     <ul class="nav">
                         @links
                     </ul>

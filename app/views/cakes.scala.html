@@ -5,7 +5,9 @@
         <div class="span3 sidenav visible-desktop" data-spy="affix-top"> <!-- Start left side-->
             <ul class="bs-docs-sidenav affix nav nav-list">
                 @for(cake <- cakes) {
-                <li><a href='#@cake.name.replaceAll(" ", "")'><img src="@routes.Assets.at(cake.imageUrl)" class="smallImage img-circle"> @cake.name</a></li>
+                <li><a href='#@cake.name.replaceAll(" ", "")'>
+                   <img src="@routes.Assets.at(cake.imageUrl)" class="smallImage img-circle"> @cake.name
+                </a></li>
                 }
             </ul>
         </div> <!-- End left side-->
