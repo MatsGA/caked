@@ -1,5 +1,5 @@
 menu.cakes=Kaker
-menu.treats=Søtsaker
+menu.treats=SÃ¸tsaker
 menu.contact=Kontakt
 menu.calendar=Kalender
 menu.about=Om CAKED!

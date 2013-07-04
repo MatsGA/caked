@@ -4,7 +4,8 @@ import play.api.mvc._
 import model.Cake
 
 object Application extends Controller {
-  
+  var language = "no"
+
   def index = cakes()
 
   def calendar = Action {
@@ -25,5 +26,10 @@ object Application extends Controller {
 
   def contact = Action {
     Ok(views.html.contact())
+  }
+
+  def setLanguage(lang: String) = {
+    language = lang
+    cakes();
   }
 }
