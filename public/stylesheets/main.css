@@ -1,9 +1,15 @@
-body {
+body{
     /*background-color: rgb(200, 255, 255);*/
+
 }
 
 .adjustedFromTop {
-    display: block; position: relative; top: -60px; visibility: hidden;
+    /*display: block;*/
+    /*position: relative;*/
+    /*top: -60px;*/
+    /*visibility: hidden;*/
+    margin-top: -60px;
+    padding-top: 60px;
 }
 
 .smallImage {
@@ -16,7 +22,6 @@ body {
 
 .visible-desktop {
     padding-top: 60px;
-    padding-bottom: 40px;
 }
 
 /* Sidenav for Docs

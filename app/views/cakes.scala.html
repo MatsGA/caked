@@ -1,4 +1,4 @@
-@(cakes: Seq[model.Cake])
+@(cakes: Seq[model.Cake])(implicit lang: Lang)
 
 @main("Cakes") {
     <div class="row-fluid">
@@ -14,12 +14,11 @@
 
         <div class="span9"> <!-- Start right side-->
             @for(cake <- cakes) {
-                <a class="adjustedFromTop" id='@cake.name.replaceAll(" ", "")'></a>
-                <div class="row-fluid"> <!-- title and image -->
+            <div class="row-fluid"> <!-- title and image -->
                     <div class="span5">
                         <img src="@routes.Assets.at(cake.imageUrl)" class="img-polaroid">
                     </div>
-                    <div class="span4">
+                    <div class="span4 adjustedFromTop" id='@cake.name.replaceAll(" ", "")'>
                         <h1>@cake.name</h1>
                     </div>
                     <div class="span4">

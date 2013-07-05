@@ -2,11 +2,13 @@ package model
 
 import scala.xml.NodeBuffer
 import controllers.Application
+import play.api.i18n.Lang
 
 case class Cake(name: String, imageUrl: String, priceInfo: String)(val description: NodeBuffer)
 
 object Cake {
-  def cakes = if (Application.language == "no") cakesNo else cakesEn
+  def cakes(implicit lang : Lang) = if (lang.language == "no") cakesNo else cakesEn
+
 
   val cakesNo = List(
     new Cake("Norsk kake", "images/cake1.jpg", "1250 NOK")(
@@ -81,6 +83,14 @@ object Cake {
         <p>
           <strong>Enjoy it on a summer day!</strong>
         </p>
+        <p>You can never have too many berries. Do you want to add other types of berries? Ok, I will fix it!</p>
+        <p>You can never have too many berries. Do you want to add other types of berries? Ok, I will fix it!</p>
+        <p>You can never have too many berries. Do you want to add other types of berries? Ok, I will fix it!</p>
+        <p>You can never have too many berries. Do you want to add other types of berries? Ok, I will fix it!</p>
+        <p>You can never have too many berries. Do you want to add other types of berries? Ok, I will fix it!</p>
+        <p>You can never have too many berries. Do you want to add other types of berries? Ok, I will fix it!</p>
+        <p>You can never have too many berries. Do you want to add other types of berries? Ok, I will fix it!</p>
+        <p>You can never have too many berries. Do you want to add other types of berries? Ok, I will fix it!</p>
         <p>You can never have too many berries. Do you want to add other types of berries? Ok, I will fix it!</p>
         <blockquote>
           <p>Bears fruit cake is the best cake you will ever eat!</p>

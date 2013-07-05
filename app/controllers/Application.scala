@@ -2,34 +2,36 @@ package controllers
 
 import play.api.mvc._
 import model.Cake
+import play.api.i18n.Lang
+import play.api.Play.current
 
 object Application extends Controller {
-  var language = "no"
 
   def index = cakes()
 
-  def calendar = Action {
+  def calendar = Action { implicit request =>
     Ok(views.html.calendar())
   }
 
-  def about = Action {
+  def about = Action { implicit request =>
     Ok(views.html.about())
   }
 
-  def cakes = Action {
+  def cakes = Action { implicit request =>
     Ok(views.html.cakes(Cake.cakes))
   }
 
-  def treats = Action {
+  def treats = Action { implicit request =>
     Ok(views.html.treats())
   }
 
-  def contact = Action {
+  def contact = Action { implicit request =>
     Ok(views.html.contact())
   }
 
-  def setLanguage(lang: String) = {
-    if(List("no", "en") contains lang) language = lang
-    cakes();
+  def setLanguage(lang: String) = Action {
+    implicit request =>
+      val referrer = request.headers.get(REFERER).getOrElse("/")
+      Redirect(referrer).withLang(Lang(lang))
   }
 }
