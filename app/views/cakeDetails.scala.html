@@ -1,0 +1,24 @@
+@(picSize: Int, textSize: Int, cakes: Seq[model.Cake])(implicit lang: Lang)
+@descSize= @{picSize + textSize}
+
+@cakes.map{cake =>
+    <div class="row-fluid"> <!-- title and image -->
+        <div class="span@picSize">
+            <img src="@routes.Assets.at(cake.imageUrl)" class="img-polaroid"/>
+        </div>
+        <div class="span@textSize adjustedFromTop" id='@cake.name.replaceAll(" ", "")'>
+            <h1>@cake.name</h1>
+            <h3>@cake.priceInfo</h3>
+            <h4><a href="mailto:cakes@@caked.no?Subject=CAKED! order: @cake.name&body=Name: %0AAddress: %0ATelephone: %0ADelivery date: %0ACake name: @cake.name%0APrice: @cake.priceInfo">Order</a></h4>
+        </div>
+    </div> <!-- title and image -->
+
+    <div class="row-fluid">
+        <div class="span@descSize cakeDescription">  <!-- description -->
+            @cake.description
+        </div>
+    </div> <!-- description -->
+    <hr />
+}
+
+

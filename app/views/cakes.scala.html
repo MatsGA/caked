@@ -6,36 +6,19 @@
             <ul class="bs-docs-sidenav affix nav nav-list">
                 @for(cake <- cakes) {
                 <li><a href='#@cake.name.replaceAll(" ", "")'>
-                   <img src="@routes.Assets.at(cake.imageUrl)" class="smallImage img-circle"> @cake.name
-                </a></li>
+                   <img src="@routes.Assets.at(cake.imageUrl)" class="smallImage img-circle"/> @cake.name</a>
+                </li>
                 }
             </ul>
         </div> <!-- End left side-->
 
-        <div class="span9"> <!-- Start right side-->
-            @for(cake <- cakes) {
-            <div class="row-fluid"> <!-- title and image -->
-                    <div class="span5">
-                        <img src="@routes.Assets.at(cake.imageUrl)" class="img-polaroid">
-                    </div>
-                    <div class="span4 adjustedFromTop" id='@cake.name.replaceAll(" ", "")'>
-                        <h1>@cake.name</h1>
-                    </div>
-                    <div class="span4">
-                        <h3>@cake.priceInfo</h3>
-                    </div>
-                    <div class="span4">
-                        <h4><a href="mailto:cakes@@caked.no?Subject=CAKED! order: @cake.name&body=Name: %0AAddress: %0ATelephone: %0ADelivery date: %0ACake name: @cake.name%0APrice: @cake.priceInfo">Order</a></h4>
-                    </div>
-                </div> <!-- title and image -->
+        <div class="span9 visible-desktop"> <!-- Start right side desktop-->
+            @cakeDetails(5, 4, cakes)
+        </div> <!-- End right side desktop-->
+        <div class="span12 hidden-desktop"> <!-- Start right side small-->
+            @cakeDetails(7, 5, cakes)
+        </div> <!-- End right side small-->
 
-                <div class="row-fluid">
-                    <div class="span9 cakeDescription">  <!-- description -->
-                        @cake.description
-                    </div>
-                </div> <!-- description -->
-                <hr />
-            }
-        </div> <!-- End right side-->
+
     </div>
 }
