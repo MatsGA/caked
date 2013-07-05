@@ -29,7 +29,7 @@ object Application extends Controller {
   }
 
   def setLanguage(lang: String) = {
-    language = lang
+    if(List("no", "en") contains lang) language = lang
     cakes();
   }
 }
