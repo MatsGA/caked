@@ -1,7 +1,6 @@
 package model
 
 import scala.xml.NodeBuffer
-import controllers.Application
 import play.api.i18n.Lang
 
 case class Cake(name: String, imageUrl: String, priceInfo: String)(val description: NodeBuffer)
