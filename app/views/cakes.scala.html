@@ -2,7 +2,7 @@
 
 @main("Cakes") {
     <div class="row-fluid">
-        <div class="span3 sidenav visible-desktop" data-spy="affix-top"> <!-- Start left side-->
+        <div class="span3 sidenav visible-desktop" data-spy="affix-top">  <!-- Start left side cake menu bar -->
             <ul class="bs-docs-sidenav affix nav nav-list">
                 @for(cake <- cakes) {
                 <li><a href='#@cake.name.replaceAll(" ", "")'>
@@ -13,6 +13,10 @@
         </div> <!-- End left side-->
 
         <div class="span9 visible-desktop"> <!-- Start right side desktop-->
+            <h1>Previous CAKED! work...</h1>
+            <p>Get inspired for your own occasion!</p>
+            <p>All cakes are fully customisable and the only limit is your imagination. No job is too small</p>
+            <hr>
             @cakeDetails(5, 4, cakes)
         </div> <!-- End right side desktop-->
         <div class="span12 hidden-desktop"> <!-- Start right side small-->

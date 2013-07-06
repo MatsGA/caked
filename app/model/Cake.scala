@@ -20,20 +20,18 @@ object Cake {
 
   val cakesEn =
     List(
-      new Cake("Super duper megagood cake", "images/cake1.jpg", "250 NOK")(
+      new Cake("Sports Cakes", "images/football.jpg", "250 NOK")(
         <p>
-          <strong>The perfect cake for special occasions.</strong>
+          <strong>For the sports fan in your lfie!</strong>
         </p>
-        <p>Popular amongst:</p>
+        <p>Fully customisable...</p>
         <ul>
-          <li>Children</li>
-          <li>Cats</li>
-          <li>Firemen</li>
-          <li>Students</li>
-          <li>Skateboarders</li>
+          <li>Any team, any sport</li>
+          <li>Any occassion- retirements, birthdays, you name it!</li>
+          <li>Your team shirt, a football pitch, a logo or a combination.</li>
         </ul>
         <p>
-          <strong>Can easily be enjoyed alone, keeps in the
+          <strong>Currently available in vanilla, chocolate or red velvet cake.
             <abbr title="refrigurator">fridge</abbr>
             for 5 years!</strong>
         </p>
