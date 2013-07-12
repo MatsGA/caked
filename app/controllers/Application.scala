@@ -1,7 +1,7 @@
 package controllers
 
 import play.api.mvc._
-import model.Cake
+import model.{Treat, Cake}
 import play.api.i18n.Lang
 import play.api.Play.current
 
@@ -22,7 +22,7 @@ object Application extends Controller {
   }
 
   def treats = Action { implicit request =>
-    Ok(views.html.treats())
+    Ok(views.html.treats(Treat.treats))
   }
 
   def contact = Action { implicit request =>

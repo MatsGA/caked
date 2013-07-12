@@ -1,28 +1,8 @@
-@(cakes: Seq[model.Cake])(implicit lang: Lang)
+@(cakes: Seq[model.Product])(implicit lang: Lang)
 
-@main("Cakes") {
-    <div class="row-fluid">
-        <div class="span3 sidenav visible-desktop" data-spy="affix-top">  <!-- Start left side cake menu bar -->
-            <ul class="bs-docs-sidenav affix nav nav-list">
-                @for(cake <- cakes) {
-                <li><a href='#@cake.name.replaceAll(" ", "")'>
-                   <img src="@routes.Assets.at(cake.imageUrl)" class="smallImage img-circle"/> @cake.name</a>
-                </li>
-                }
-            </ul>
-        </div> <!-- End left side-->
-
-        <div class="span9 visible-desktop"> <!-- Start right side desktop-->
-            <h1>Previous CAKED! work...</h1>
-            <p>Get inspired for your own occasion!</p>
-            <p>All cakes are fully customisable and the only limit is your imagination. No job is too small</p>
-            <hr>
-            @cakeDetails(5, 4, cakes)
-        </div> <!-- End right side desktop-->
-        <div class="span12 hidden-desktop"> <!-- Start right side small-->
-            @cakeDetails(7, 5, cakes)
-        </div> <!-- End right side small-->
-
-
-    </div>
+@products("Cakes", cakes){
+    <h1>@Messages("product.cakes.title")</h1>
+    <p>@Messages("product.cakes.line1")</p>
+    <p>@Messages("product.cakes.line2")</p>
+    <hr>
 }

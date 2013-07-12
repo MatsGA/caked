@@ -3,3 +3,11 @@ menu.treats=Søtsaker
 menu.contact=Kontakt
 menu.calendar=Kalender
 menu.about=Om CAKED!
+
+product.cakes.title=Tidligere kaker fra CAKED!
+product.cakes.line1=Bli inspirert for ditt selskap eller din anledning!
+product.cakes.line2=Alle kakene kan tilpasses. Din fantasi er den eneste begrensningen. Ingen jobber er for små!
+
+product.treats.title=Søtsaker fra CAKED!
+product.treats.line1=Bakevarer og ingredienser!
+product.treats.line2=Jeg tilbyr diverse bakevarer og søtsaker tilpasset årstidene og høytidene!

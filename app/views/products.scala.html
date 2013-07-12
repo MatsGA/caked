@@ -1,0 +1,26 @@
+@(productsName: String, products: Seq[model.Product])(topText: Html)(implicit lang: Lang)
+
+@main(productsName) {
+    <div class="row-fluid">
+        <div class="span3 sidenav visible-desktop" data-spy="affix-top">  <!-- Start left side product menu bar -->
+            <ul class="bs-docs-sidenav affix nav nav-list">
+                @for(product <- products) {
+                <li><a href='#@product.name.replaceAll(" ", "")'>
+                   <img src="@routes.Assets.at(product.imageUrl)" class="smallImage img-circle"/> @product.name</a>
+                </li>
+                }
+            </ul>
+        </div> <!-- End left side-->
+
+        <div class="span9 visible-desktop"> <!-- Start right side desktop-->
+            @topText
+            @productDetails(5, 4, products)
+        </div> <!-- End right side desktop-->
+        <div class="span12 hidden-desktop"> <!-- Start right side small-->
+            @topText
+            @productDetails(7, 5, products)
+        </div> <!-- End right side small-->
+
+
+    </div>
+}

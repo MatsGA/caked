@@ -1,6 +1,8 @@
-@()(implicit lang: Lang)
+@(treats: Seq[model.Product])(implicit lang: Lang)
 
-@main("Treats") {
-    <h1>World of treats</h1>
-    <p>Here all other treats will come</p>
+@products("Treats", treats){
+<h1>@Messages("product.treats.title")</h1>
+<p>@Messages("product.treats.line1")</p>
+<p>@Messages("product.treats.line2")</p>
+<hr>
 }
