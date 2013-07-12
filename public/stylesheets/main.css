@@ -16,6 +16,11 @@ body{
     height: 40px;
 }
 
+.mediumImage {
+    max-height: 400px;
+    max-width: 400px;
+}
+
 .productDescription {
     padding-top: 10px;
 }

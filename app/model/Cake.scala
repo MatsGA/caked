@@ -52,7 +52,7 @@ object Cake {
         </p>
           <p>I also provide soft drinks and can make a whole party arrangement if that's what you fancy! You can trust in me!</p>
       ),
-      new Product("Super duper megagood cake 2", "images/cake1.jpg", "250 NOK")(
+      new Product("Super duper megagood cake", "images/cake1.jpg", "250 NOK")(
         <p>
           <strong>The perfect cake for special occasions.</strong>
         </p>
@@ -72,30 +72,6 @@ object Cake {
         <p>
           <small>I take no responsibility for ingesting food that has gone bad</small>
         </p>
-      ),
-      new Product("Great berry cake 2", "images/cake2.jpg", "150,-")(
-        <p>
-          <strong>Enjoy it on a summer day!</strong>
-        </p>
-        <p>You can never have too many berries. Do you want to add other types of berries? Ok, I will fix it!</p>
-        <p>You can never have too many berries. Do you want to add other types of berries? Ok, I will fix it!</p>
-        <p>You can never have too many berries. Do you want to add other types of berries? Ok, I will fix it!</p>
-        <p>You can never have too many berries. Do you want to add other types of berries? Ok, I will fix it!</p>
-        <p>You can never have too many berries. Do you want to add other types of berries? Ok, I will fix it!</p>
-        <p>You can never have too many berries. Do you want to add other types of berries? Ok, I will fix it!</p>
-        <p>You can never have too many berries. Do you want to add other types of berries? Ok, I will fix it!</p>
-        <p>You can never have too many berries. Do you want to add other types of berries? Ok, I will fix it!</p>
-        <p>You can never have too many berries. Do you want to add other types of berries? Ok, I will fix it!</p>
-        <blockquote>
-          <p>Bears fruit cake is the best cake you will ever eat!</p>
-          <small>Delia Smith</small>
-        </blockquote>
-      ),
-      new Product("Children crazy cake 2", "images/cake3.jpg", "350,-")(
-        <p>
-          <strong>Get your child somethign special for his or her birthday.</strong>
-        </p>
-        <p>I also provide soft drinks and can make a whole party arrangement if that's what you fancy! You can trust in me!</p>
       )
     )
 }

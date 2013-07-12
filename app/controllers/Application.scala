@@ -10,11 +10,11 @@ object Application extends Controller {
   def index = cakes()
 
   def calendar = Action { implicit request =>
-    Ok(views.html.calendar())
+    if (lang.language == "no") Ok(views.html.calendarNo()) else Ok(views.html.calendar())
   }
 
   def about = Action { implicit request =>
-    Ok(views.html.about())
+    if (lang.language == "no") Ok(views.html.aboutNo()) else Ok(views.html.about())
   }
 
   def cakes = Action { implicit request =>
@@ -26,7 +26,7 @@ object Application extends Controller {
   }
 
   def contact = Action { implicit request =>
-    Ok(views.html.contact())
+    if (lang.language == "no") Ok(views.html.contactNo()) else Ok(views.html.contact())
   }
 
   def setLanguage(lang: String) = Action {
