@@ -28,12 +28,7 @@ object Cake {
           <li>Your team shirt, a football pitch, a logo or a combination.</li>
         </ul>
         <p>
-          <strong>Currently available in vanilla, chocolate or red velvet cake.
-            <abbr title="refrigurator">fridge</abbr>
-            for 5 years!</strong>
-        </p>
-        <p>
-          <small>I take no responsibility for ingesting food that has gone bad</small>
+          <strong>Currently available in vanilla, chocolate or red velvet cake.</strong>
         </p>
       ),
       new Product("Great berry cake", "images/cake2.jpg", "150,-")(
