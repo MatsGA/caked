@@ -43,7 +43,7 @@ object Cake {
       ),
       new Product("Children crazy cake", "images/cake3.jpg", "350,-")(
         <p>
-          <strong>Get your child somethign special for his or her birthday.</strong>
+          <strong>Get your child something special for his or her birthday.</strong>
         </p>
           <p>I also provide soft drinks and can make a whole party arrangement if that's what you fancy! You can trust in me!</p>
       ),

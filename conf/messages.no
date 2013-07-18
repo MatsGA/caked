@@ -11,3 +11,6 @@ product.cakes.line2=Alle kakene kan tilpasses. Din fantasi er den eneste begrens
 product.treats.title=Søtsaker fra CAKED!
 product.treats.line1=Bakevarer og ingredienser!
 product.treats.line2=Jeg tilbyr diverse bakevarer og søtsaker tilpasset årstidene og høytidene!
+
+calendar.title=Når kan jeg levere?
+calendar.line1=Høytider og ferier er travle tider. Jeg kan ikke levere varer på dager markert som "Busy" i kalenderen.

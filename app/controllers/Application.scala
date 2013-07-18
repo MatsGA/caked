@@ -10,7 +10,7 @@ object Application extends Controller {
   def index = cakes()
 
   def calendar = Action { implicit request =>
-    if (lang.language == "no") Ok(views.html.calendarNo()) else Ok(views.html.calendar())
+    Ok(views.html.calendar())
   }
 
   def about = Action { implicit request =>
