@@ -26,7 +26,7 @@ object Application extends Controller {
   }
 
   def contact = Action { implicit request =>
-    if (lang.language == "no") Ok(views.html.contactNo()) else Ok(views.html.contact())
+    Ok(views.html.contact())
   }
 
   def setLanguage(lang: String) = Action {
