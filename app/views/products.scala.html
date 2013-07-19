@@ -1,5 +1,4 @@
-@(productsName: String, products: Seq[model.Product])(topText: Html)(implicit lang: Lang)
-
+@(productsName: String, products: Seq[model.Product])(topText: Html)(implicit lang: Lang, flash: Flash)
 @main(productsName) {
     <div class="row-fluid">
         <div class="span3 sidenav visible-desktop" data-spy="affix-top">  <!-- Start left side product menu bar -->

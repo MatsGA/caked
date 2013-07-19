@@ -19,7 +19,7 @@ object Cake {
     List(
       new Product("Sports Cakes", "images/football.jpg", "250 NOK")(
         <p>
-          <strong>For the sports fan in your lfie!</strong>
+          <strong>For the sports fan in your life!</strong>
         </p>
         <p>Fully customisable...</p>
         <ul>
@@ -37,7 +37,7 @@ object Cake {
         </p>
         <p>You can never have too many berries. Do you want to add other types of berries? Ok, I will fix it!</p>
         <blockquote>
-          <p>Bears fruit cake is the best cake you will ever eat!</p>
+          <p>Bears berry cake is the best cake you will ever eat!</p>
           <small>Delia Smith</small>
         </blockquote>
       ),

@@ -10,6 +10,7 @@ GET     /about                      controllers.Application.about
 GET     /contact                    controllers.Application.contact
 GET     /calendar                   controllers.Application.calendar
 GET     /language                   controllers.Application.setLanguage(lang: String ?= "no")
+GET     /tweeted                    controllers.Application.tweeted
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

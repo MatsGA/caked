@@ -1,6 +1,5 @@
-@(picSize: Int, textSize: Int, products: Seq[model.Product])(implicit lang: Lang)
+@(picSize: Int, textSize: Int, products: Seq[model.Product])(implicit lang: Lang, flash: Flash)
 @descSize= @{picSize + textSize}
-
 @products.map{product =>
     <div class="row-fluid"> <!-- title and image -->
         <div class="span@picSize">

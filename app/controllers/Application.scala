@@ -4,13 +4,15 @@ import play.api.mvc._
 import model.{Treat, Cake}
 import play.api.i18n.Lang
 import play.api.Play.current
+import play.i18n.Messages
+import play.api.templates.Html
 
 object Application extends Controller {
 
   def index = cakes()
 
   def calendar = Action { implicit request =>
-    Ok(views.html.calendar())
+    OkWithTrim(views.html.calendar())
   }
 
   def about = Action { implicit request =>
@@ -18,15 +20,25 @@ object Application extends Controller {
   }
 
   def cakes = Action { implicit request =>
-    Ok(views.html.cakes(Cake.cakes))
+    OkWithTrim(views.html.cakes(Cake.cakes))
   }
 
   def treats = Action { implicit request =>
-    Ok(views.html.treats(Treat.treats))
+    OkWithTrim(views.html.treats(Treat.treats))
+  }
+
+  def OkWithTrim(html: Html): Result = {
+    Ok(Html(html.body.trim))
   }
 
   def contact = Action { implicit request =>
-    Ok(views.html.contact())
+    OkWithTrim(views.html.contact())
+  }
+
+  def tweeted = Action {
+    implicit request =>
+      val referrer = request.headers.get(REFERER).getOrElse("/")
+      Redirect(referrer).flashing("tweeted" -> Messages.get(lang, "contact.tweeted.text"))
   }
 
   def setLanguage(lang: String) = Action {

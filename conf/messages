@@ -16,4 +16,6 @@ calendar.title=When do I deliver?
 calendar.line1=Holidays and national celebrations are busy times. I can not deliver cake on days marked as busy in the calendar.
 
 contact.title=Do you have questions?
-contact.line1=Ask us anything on Twitter!
+contact.line1=Ask me anything on Twitter!
+contact.tweeted.heading=Tweet posted!
+contact.tweeted.text=Please wait. Your message will appear in a minute.

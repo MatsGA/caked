@@ -2,7 +2,7 @@ menu.cakes=Kaker
 menu.treats=Søtsaker
 menu.contact=Kontakt
 menu.calendar=Kalender
-menu.about=Om CAKED!
+menu.about=Om
 
 product.cakes.title=Tidligere kaker fra CAKED!
 product.cakes.line1=Bli inspirert for ditt selskap eller din anledning!
@@ -16,4 +16,6 @@ calendar.title=Når kan jeg levere?
 calendar.line1=Høytider og ferier er travle tider. Jeg kan ikke levere varer på dager markert som "Busy" i kalenderen.
 
 contact.title=Har du spørsmål?
-contact.line1=Spør oss på Twitter!
+contact.line1=Spør meg på Twitter!
+contact.tweeted.heading=Tweet sendt!
+contact.tweeted.text=Vennligst vent. Meldingen din vil vises om en liten stund.
