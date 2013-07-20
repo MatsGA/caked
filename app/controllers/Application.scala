@@ -1,7 +1,7 @@
 package controllers
 
 import play.api.mvc._
-import model.{Treat, Cake}
+import model.{Product, Treat}
 import play.api.i18n.Lang
 import play.api.Play.current
 import play.i18n.Messages
@@ -20,11 +20,11 @@ object Application extends Controller {
   }
 
   def cakes = Action { implicit request =>
-    OkWithTrim(views.html.cakes(Cake.cakes))
+    OkWithTrim(views.html.cakes(Product.products))
   }
 
-  def treats = Action { implicit request =>
-    OkWithTrim(views.html.treats(Treat.treats))
+  def inspiration = Action { implicit request =>
+    OkWithTrim(views.html.inspiration(Treat.treats))
   }
 
   def OkWithTrim(html: Html): Result = {

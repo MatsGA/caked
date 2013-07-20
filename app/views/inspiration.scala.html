@@ -1,0 +1,7 @@
+@(stories: Seq[model.Product])(implicit lang: Lang, flash: Flash)
+@products("Inspiration", stories){
+    <h1>@Messages("product.inspiration.title")</h1>
+    <p>@Messages("product.inspiration.line1")</p>
+    <p>@Messages("product.inspiration.line2")</p>
+    <hr/>
+}

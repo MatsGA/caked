@@ -6,7 +6,7 @@ object Treat {
   def treats(implicit lang : Lang) = if (lang.language == "no") treatsNo else treatsEn
 
   val treatsNo = List(
-    new Product("Syltetøy for kake", "images/cake2.jpg", "150 NOK")(
+    new Product("Syltetøy for kake", "images/football.jpg")(
       <p>
         <strong>Norsk beskrivelse.</strong>
       </p>
@@ -16,7 +16,7 @@ object Treat {
 
   val treatsEn =
     List(
-      new Product("Jam for cake", "images/cake2.jpg", "150 NOK")(
+      new Product("Jam for cake", "images/football.jpg")(
         <p>
           <strong>Engrish!</strong>
         </p>

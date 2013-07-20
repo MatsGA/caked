@@ -1,22 +1,21 @@
 @(active: String)(content: Html)(implicit lang: Lang, flash: Flash)
-@links() = @{
-    val categories = model.Category.categories
-    categories.map { category =>
-        val activeCat = if (active.toLowerCase == category.link) "active" else ""
-        <li class={activeCat}><a href={category.link}>{category.name}</a></li>
+
+@title() = {CAKED!}
+
+@links() = {
+    @for(category <- model.Category.categories){
+        <li class=@(if (active.toLowerCase == category.link) "active" else "")><a href=@category.link>@category.name</a></li>
     }
 }
 
-@flashMessage() = @{
-    flash.get("tweeted").map { message =>
+@flashMessage() = {
+    @flash.get("tweeted").map { message =>
         <div class="alert alert-success">
             <button type="button" class="close" data-dismiss="alert">&times;</button>
-            <strong>{Messages("contact.tweeted.heading")}</strong> {message}
+            <strong>@Messages("contact.tweeted.heading")</strong> @message
         </div>
     }
 }
-
-@title() = @{"CAKED!"}
 
 <!DOCTYPE html>
 <html>
@@ -94,6 +93,7 @@
             @flashMessage
             @content
         </div>
+        <div class="row-fluid"><div class="span12"><div class="fb-like" data-href="http://caked.herokuapp.com" data-send="false" data-width="450" data-show-faces="true"></div></div></div>
     </div>
 
     <script src='@routes.Assets.at("javascripts/jquery-1.9.0.min.js")' type="text/javascript"></script>
