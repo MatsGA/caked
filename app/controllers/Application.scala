@@ -9,7 +9,7 @@ import play.api.templates.Html
 
 object Application extends Controller {
 
-  def index = cakes()
+  def index = about()
 
   def calendar = Action { implicit request =>
     OkWithTrim(views.html.calendar())
@@ -23,8 +23,8 @@ object Application extends Controller {
     OkWithTrim(views.html.cakes(Product.products))
   }
 
-  def inspiration = Action { implicit request =>
-    OkWithTrim(views.html.inspiration(Treat.treats))
+  def gallery = Action { implicit request =>
+    OkWithTrim(views.html.gallery(Treat.treats))
   }
 
   def OkWithTrim(html: Html): Result = {

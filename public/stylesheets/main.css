@@ -12,7 +12,11 @@ body{
 }
 
 .smallImage {
-    height: 40px;
+    max-height: 27px;
+}
+
+.smallLogo {
+    max-height: 15px;
 }
 
 .mediumImage {

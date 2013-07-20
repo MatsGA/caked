@@ -1,5 +1,5 @@
 menu.cakes=Kaker
-menu.inspiration=Inspirasjon
+menu.gallery=Galleri
 menu.contact=Kontakt
 menu.calendar=Kalender
 menu.about=Om
@@ -8,9 +8,9 @@ product.cakes.title=Tidligere kaker fra CAKED!
 product.cakes.line1=Bli inspirert for ditt selskap eller din anledning!
 product.cakes.line2=Alle kakene kan tilpasses. Din fantasi er den eneste begrensningen. Ingen jobber er for små!
 
-product.inspiration.title=Søtsaker fra CAKED!
-product.inspiration.line1=Bakevarer og ingredienser!
-product.inspiration.line2=Jeg tilbyr diverse bakevarer og søtsaker tilpasset årstidene og høytidene!
+product.gallery.title=Søtsaker fra CAKED!
+product.gallery.line1=Bakevarer og ingredienser!
+product.gallery.line2=Jeg tilbyr diverse bakevarer og søtsaker tilpasset årstidene og høytidene!
 
 calendar.title=Når kan jeg levere?
 calendar.line1=Høytider og ferier er travle tider. Jeg kan ikke levere varer på dager markert som "Busy" i kalenderen.

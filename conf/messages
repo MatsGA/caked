@@ -1,5 +1,5 @@
 menu.cakes=Cakes
-menu.inspiration=Inspiration
+menu.gallery=Gallery
 menu.contact=Contact
 menu.calendar=Calendar
 menu.about=About
@@ -8,9 +8,9 @@ product.cakes.title=Cakes
 product.cakes.line1=All cakes start at a standard price per serving.
 product.cakes.line2=Contact us to discuss your requirements and get a quote. As our cakes are personally customised the final price will depend on the level of work required for your design.
 
-product.inspiration.title=Previous CAKED! work
-product.inspiration.line1=Get inspired for your own occasion!
-product.inspiration.line2=All cakes are fully customisable and the only limit is your imagination. No job is too small
+product.gallery.title=Previous CAKED! work
+product.gallery.line1=Get inspired for your own occasion!
+product.gallery.line2=All cakes are fully customisable and the only limit is your imagination. No job is too small
 
 calendar.title=When do I deliver?
 calendar.line1=Holidays and national celebrations are busy times. I can not deliver cake on days marked as busy in the calendar.

@@ -5,7 +5,7 @@
 # Home page
 GET     /                           controllers.Application.index
 GET     /cakes                      controllers.Application.cakes
-GET     /inspiration                controllers.Application.inspiration
+GET     /gallery                    controllers.Application.gallery
 GET     /about                      controllers.Application.about
 GET     /contact                    controllers.Application.contact
 GET     /calendar                   controllers.Application.calendar
