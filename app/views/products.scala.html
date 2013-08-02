@@ -1,19 +1,18 @@
 @(productsName: String, products: Seq[model.Product])(topText: Html)(implicit lang: Lang, flash: Flash)
 @main(productsName) {
-    <div class="row-fluid"><div class="span12">@topText</div></div>
-    <div class="row-fluid">
+    <div class="row"><div class="col-12">@topText</div></div>
+    <div class="row">
     @for(i <- products.indices){
-        @if(i % 2 == 0) {<div class="row-fluid">}
-            <div class="span2">
-                <img src="@routes.Assets.at(products(i).imageUrl)" class="img-polaroid hidden-phone"/>
-                <img src="@routes.Assets.at(products(i).imageUrl)" class="img-polaroid visible-phone productImage"/>
+        @if(i % 2 == 0) {<div class="row">}
+            <div class="col-12 col-sm-2">
+                <img src="@routes.Assets.at(products(i).imageUrl)" class="img-responsive"/>
             </div>
-            <div class="span4" id='@products(i).name.replaceAll(" ", "")'>
+            <div class="col-12 col-sm-4" id='@products(i).name.replaceAll(" ", "")'>
                 <h2>@products(i).name</h2>
                 @products(i).description
             </div>
-        @if(i % 2 != 0) {<div class="span12"><hr /></div></div>}
+        @if(i % 2 != 0) {<div class="col-12"><hr /></div></div>}
     }
-    @if(products.length % 2 != 0) {<div class="span12"><hr /></div></div>}
+    @if(products.length % 2 != 0) {<div class="col-12"><hr /></div></div>}
     </div>
 }
