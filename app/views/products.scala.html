@@ -1,5 +1,5 @@
-@(productsName: String, products: Seq[model.Product])(topText: Html)(implicit lang: Lang, flash: Flash)
-@main(productsName) {
+@(categoryName: String, products: Seq[model.Product])(topText: Html)(implicit lang: Lang, flash: Flash)
+@main(categoryName) {
     <div class="row"><div class="col-12">@topText</div></div>
     <div class="row">
     @for(i <- products.indices){

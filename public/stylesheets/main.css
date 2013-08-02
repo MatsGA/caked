@@ -3,12 +3,48 @@ body{
     padding-top: 40px;
 }
 
-.smallImage {
+.logo {
     max-height: 27px;
 }
 
-.smallLogo {
-    height: 15px;
+.storyThumbnail {
+    max-height: 50px;
+    max-width: 50px;
+}
+
+.adjustedFromTop {
+    margin-top: -60px;
+    padding-top: 60px;
+}
+
+.navbar-nav > li.topNavActive > a {
+    color: #555555;
+    background-color: #d5d5d5;
+}
+
+.sidenav {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #f7f5fa;
+    border-radius: 5px;
+    position: fixed;
+}
+
+.sidenav > li.active > a,
+.sidenav > li.active > a:hover{
+    color: #ffffff;
+}
+
+.sidenav > li > a,
+.sidenav > li > a:hover{
+    color: rgb(54, 117, 136);
+}
+
+.sidenav > .active,
+.sidenav > .active > a:hover{
+    background-color: rgb(54, 117, 136);
 }
 
 .navbar {
@@ -16,15 +52,14 @@ body{
 }
 
 .navbar-link,
-.nav > li > a {
+.navbar-nav > li > a {
     color: #ffffff;
 }
 
-.nav > li > a:hover,
+.navbar-nav > li > a:hover,
 .navbar-link:hover {
     text-decoration: none;
     color: #999999;
 }
 
-.nav > li.active > a {
-}
+.fb-like, .fb-comments, .fb-comments > span[style], .fb_iframe_widget iframe[style] { width: 100% !important; }

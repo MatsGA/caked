@@ -1,7 +1,7 @@
 package controllers
 
 import play.api.mvc._
-import model.{Product, Treat}
+import model.{Story, Product}
 import play.api.i18n.Lang
 import play.api.Play.current
 import play.i18n.Messages
@@ -24,7 +24,7 @@ object Application extends Controller {
   }
 
   def gallery = Action { implicit request =>
-    OkWithTrim(views.html.gallery(Treat.treats))
+    OkWithTrim(views.html.gallery(Story.stories))
   }
 
   def OkWithTrim(html: Html): Result = {

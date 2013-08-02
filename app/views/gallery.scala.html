@@ -1,5 +1,5 @@
-@(stories: Seq[model.Product])(implicit lang: Lang, flash: Flash)
-@products("Gallery", stories){
+@(storyList: Seq[model.Story])(implicit lang: Lang, flash: Flash)
+@stories("Gallery", storyList){
     <h1>@Messages("product.gallery.title")</h1>
     <p>@Messages("product.gallery.line1")</p>
     <p>@Messages("product.gallery.line2")</p>
