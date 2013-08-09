@@ -4,7 +4,7 @@ body{
 }
 
 .logo {
-    max-height: 27px;
+    max-height: 28px;
 }
 
 .storyThumbnail {
@@ -15,11 +15,6 @@ body{
 .adjustedFromTop {
     margin-top: -60px;
     padding-top: 60px;
-}
-
-.navbar-nav > li.topNavActive > a {
-    color: #555555;
-    background-color: #d5d5d5;
 }
 
 .sidenav {
@@ -47,8 +42,15 @@ body{
     background-color: rgb(54, 117, 136);
 }
 
+
 .navbar {
     background-color: rgb(54, 117, 136);
+}
+
+.navbar-nav > li.topNavActive > a {
+    color: #555555;
+    /*background-color: #d5d5d5;*/
+    background-color: rgb(195, 214, 155);
 }
 
 .navbar-link,
@@ -59,7 +61,12 @@ body{
 .navbar-nav > li > a:hover,
 .navbar-link:hover {
     text-decoration: none;
-    color: #999999;
+    color: #c8c9cc;
 }
+
+.navbar-nav > li.topNavActive > a:hover {
+    color: #747474;
+}
+
 
 .fb-like, .fb-comments, .fb-comments > span[style], .fb_iframe_widget iframe[style] { width: 100% !important; }

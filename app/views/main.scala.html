@@ -4,10 +4,10 @@
 
 @links() = {
     @for(category <- model.Category.categories){
-        <li class=@(if (active.toLowerCase == category.link) "topNavActive" else "")><a href=@category.link>@category.name</a></li>
+        <li class=@(if (active.toLowerCase == category.link) "topNavActive" else "")><a href=@category.link><strong>@category.name</strong></a></li>
     }
-    <li class="visible-sm"><a href="language?lang=no" class="navbar-link">NO</a></li>
-    <li class="visible-sm"><a href="language?lang=en" class="navbar-link">EN</a></li>
+    <li class="visible-sm"><a href="language?lang=no" class="navbar-link"><img src='@routes.Assets.at("images/no.png")'/></a></li>
+    <li class="visible-sm"><a href="language?lang=en" class="navbar-link"><img src='@routes.Assets.at("images/gb.png")'/></a></li>
 }
 
 @flashMessage() = {
@@ -63,13 +63,13 @@
                 </button>
 
                 <div class="navbar-text visible-sm">
-                    <a href="mailto:cakes@@caked.no" class="navbar-link">cakes@@caked.no</a>
+                    <a href="mailto:cakes@@caked.no" class="navbar-link"><strong>cakes@@caked.no</strong></a>
                 </div>
 
                 <div class="navbar-text pull-right hidden-sm">
-                    <a href="language?lang=no" class="navbar-link">NO</a>
-                    <a href="language?lang=en" class="navbar-link">EN</a>
-                    <a href="mailto:cakes@@caked.no" class="navbar-link">cakes@@caked.no</a>
+                    <a href="language?lang=no" class="navbar-link"><img src='@routes.Assets.at("images/no.png")'/></a>
+                    <a href="language?lang=en" class="navbar-link"><img src='@routes.Assets.at("images/gb.png")'/></a>
+                    <a href="mailto:cakes@@caked.no" class="navbar-link"><strong>cakes@@caked.no</strong></a>
                 </div>
 
                 <div class="nav-collapse collapse navbar-responsive-collapse">
