@@ -12,6 +12,11 @@ body{
     max-width: 50px;
 }
 
+.deliveryInfo {
+    padding-left: 20px;
+    color: rgb(195, 214, 155);
+}
+
 .adjustedFromTop {
     margin-top: -60px;
     padding-top: 60px;
