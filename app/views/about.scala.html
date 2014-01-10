@@ -1,6 +1,5 @@
 @()(implicit lang: Lang, flash: Flash)
 @main("About") {
-
 <div class="row jumbotron">
     <div class="col-12 col-sm-3">
         <img class="img-responsive" src="@routes.Assets.at("images/caked.png")"/>
@@ -12,14 +11,5 @@
         <p>CAKED! provide a friendly and personal service for all occasions, send an enquiry to discuss your requirements with no obligation to order</p>
     </div>
 </div>
-<script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-47023483-1', 'caked.no');
-    ga('send', 'pageview');
-
-</script>
 }
+@analytics()
