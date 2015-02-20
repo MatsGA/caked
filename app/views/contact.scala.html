@@ -1,11 +1,17 @@
 @()(implicit lang: Lang, flash: Flash)
 @main("Contact") {
-<div class="row">
-        <div class="col-12">
-        <h1>@Messages("contact.title")</h1>
-        <p>@Messages("contact.line1")</p>
-        </div>
 
+<div class="row jumbotron">
+    <div class="col-12 col-sm-3">
+        <img class="img-responsive" src="@routes.Assets.at("images/caked.jpg")"/>
+    </div>
+    <div class="col12 col-sm-9">
+        <h1>CAKED!</h1>
+        <p>CAKED! is run by Clare. She is originally from Britain and lives in Trondheim. She has been baking for friends and family for years and decided to make that hobby a job in 2013.</p>
+        <br>
+        <p>CAKED! provide a friendly and personal service for all occasions, send an enquiry to <a href="mailto:cakes@@caked.no"><strong>cakes@@caked.no</strong></a> or talk to us on Facebook to discuss your requirements with no obligation to order.</p>
+
+    </div>
 </div>
 }
 @analytics()

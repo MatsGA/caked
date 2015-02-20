@@ -1,24 +1,12 @@
 package model
 
-import play.api.i18n.Lang
 import scala.xml.NodeBuffer
 
 case class Product(name: String, imageUrl: String)(val description: NodeBuffer)
 object Product {
-  def products(implicit lang : Lang) = if (lang.language == "no") productsNo else productsEn
-
-  val productsNo = List(
-    new Product("Norsk kake", "images/caked.png")(
-      <p>
-        <strong>Norsk beskrivelse.</strong>
-      </p>
-      <br></br>
-    )
-  )
-
-  val productsEn =
+  val products =
     List(
-      new Product("Cake Sizes and Prices", "images/football.jpg")(
+      new Product("Cake Sizes", "images/sizes.jpg")(
         <p>
           <strong>Which size cake are you after?</strong>
         </p>
@@ -30,7 +18,7 @@ object Product {
           </ul>
 
       ),
-      new Product("Cake Bases", "images/caked.png")(
+      new Product("Cake Bases", "images/bases.jpg")(
         <p>
           <strong>Which of the current available flavours would you like?</strong>
         </p>
@@ -41,7 +29,7 @@ object Product {
           <li>Traditional british fruitcake</li>
         </ul>
       ),
-      new Product("Cake Fillings", "images/caked.png")(
+      new Product("Cake Fillings", "images/fillings.jpg")(
         <p>
           <strong>What sort of filling do you want?</strong>
         </p>
@@ -52,7 +40,7 @@ object Product {
           <li>Traditional british fruitcake</li>
         </ul>
       ),
-      new Product("Cake Toppings", "images/football.jpg")(
+      new Product("Cake Toppings", "images/toppings.jpg")(
         <p>
           <strong>What do you want your cake covered with?</strong>
         </p>

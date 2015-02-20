@@ -3,7 +3,7 @@ twttr.events.bind('tweet', function(event) {
 });
 
 $('.carousel').carousel({
-    interval: 5000
+    interval: false
 });
 
 $('body').scrollspy();
