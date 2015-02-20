@@ -29,64 +29,48 @@
     </head>
     <body>
         <div id="fb-root"></div>
-        <script>
-            window.fbAsyncInit = function() {
-                // init the FB JS SDK
-                FB.init({
-                    status     : true,                                 // Check Facebook Login status
-                    xfbml      : true                                  // Look for social plugins on the page
-                });
-
-                // Additional initialization code such as adding Event Listeners goes here
-            };
-
-            // Load the SDK asynchronously
-            (function(d, s, id){
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) {return;}
-                js = d.createElement(s); js.id = id;
-                js.src = "//connect.facebook.net/en_US/all.js";
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));
-        </script>
+        <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
 
         <div class="navbar navbar-default navbar-fixed-top">
-            <div class="container-fluid">
-                <div class="">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand pull-left logo" href="/"><img class="logo" src='@routes.Assets.at("images/cakedSmall.png")'/></a>
-                </div>
+            <div class="container">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
 
+                <a class="navbar-brand pull-left logo" href="/"><img class="logo" src='@routes.Assets.at("images/cakedSmall.png")'/></a>
 
-
-                <div class="navbar-text visible-sm">
+                <div class="navbar-text pull-right hidden-xs">
                     <a href="mailto:cakes@@caked.no" class="navbar-link"><strong>cakes@@caked.no</strong></a>
                 </div>
 
-                <div class="navbar-text pull-right hidden-sm">
+                <div class="navbar-text visible-xs">
                     <a href="mailto:cakes@@caked.no" class="navbar-link"><strong>cakes@@caked.no</strong></a>
                 </div>
+
+                <ul class="nav navbar-nav hidden-xs">
+                    @links
+                <li><div class="navbar-text hidden-sm deliveryInfo"><em>Delivering cakes in Trondheim</em></div></li>
+                </ul>
 
                 <div class="nav-collapse collapse navbar-responsive-collapse">
-                    <ul class="nav navbar-nav visible-sm pull-right">
-                        @links
-                    </ul>
-                    <ul class="nav navbar-nav hidden-sm">
-                        @links
-                        <li><div class="navbar-text deliveryInfo hidden-md"><em>Delivering cakes in Trondheim</div></em></li>
+                    <ul class="nav navbar-nav visible-xs pull-right">
+                    @links
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="container-fluid">
+        <div class="container">
             @flashMessage
             @content
-            <div class="row"><div class="col-12"><div class="fb-like" data-href="http://caked.herokuapp.com" data-send="false" data-width="280" data-show-faces="true"></div></div></div>
+            <div class="row"><div class="col-12"><div class="fb-like" data-href="http://www.caked.no" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div></div></div>
         </div>
 
         <script src='@routes.Assets.at("javascripts/jquery-1.11.2.min.js")' type="text/javascript"></script>

@@ -2,16 +2,31 @@
 @main("Contact") {
 
 <div class="row jumbotron">
-    <div class="col-12 col-sm-3">
-        <img class="img-responsive" src="@routes.Assets.at("images/caked.jpg")"/>
+    <div class="row hidden-xs">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="col-sm-2">
+                    <img class="img-responsive" src="@routes.Assets.at("images/caked.jpg")"/>
+                </div>
+                <div class="col-sm-10">
+                    <img class="img-responsive" src="@routes.Assets.at("images/cover.jpg")"/>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="col12 col-sm-9">
-        <h1>CAKED!</h1>
-        <p>CAKED! is run by Clare. She is originally from Britain and lives in Trondheim. She has been baking for friends and family for years and decided to make that hobby a job in 2013.</p>
-        <br>
-        <p>CAKED! provide a friendly and personal service for all occasions, send an enquiry to <a href="mailto:cakes@@caked.no"><strong>cakes@@caked.no</strong></a> or talk to us on Facebook to discuss your requirements with no obligation to order.</p>
+    <div class="row">
+        <div class="col-xs-12 col-sm-6">
+            <h1>CAKED!</h1>
+            <p>CAKED! is run by Clare. She is originally from Britain and lives in Trondheim. She has been baking for friends and family for years and decided to make that hobby a job in 2013.</p>
+            <br>
+            <p>CAKED! provide a friendly and personal service for all occasions, send an enquiry to <a href="mailto:cakes@@caked.no"><strong>cakes@@caked.no</strong></a> or talk to us on <a target="_blank" href="https://www.facebook.com/pages/CAKED/1419620508309356">Facebook</a> to discuss your requirements with no obligation to order.</p>
 
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <div class="fb-like-box" data-href="https://www.facebook.com/pages/CAKED/1419620508309356" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="true" data-show-border="false"></div>
+        </div>
     </div>
+
 </div>
 }
 @analytics()
